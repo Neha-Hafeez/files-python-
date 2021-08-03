@@ -1,0 +1,17 @@
+def writefile():
+    f=open("table.txt","r+")
+    f.truncate(0)
+    n=2
+    print("writing table of 2 ")
+    for i in range(1,11):
+        ans=str(n * i)
+        f.write (str(n) +'*'+str(i)+"="+str(ans)+'\n')
+    print('writing ends')
+    f.close()
+
+    with open("table.txt","r") as file:
+        print(file.read())
+
+        file.close()
+
+writefile()
